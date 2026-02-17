@@ -1,14 +1,21 @@
 /**
- * UC1 - Print OOPS Banner
- * This program prints the text "OOPS" to the console.
+ * UC2 - Print OOPS Banner
+ * Displays OOPS in large ASCII banner format.
  * 
  * @author Umesh
- * @version 1.0
+ * @version 2.0
  */
 
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
-        System.out.println("OOPS");
+
+        System.out.println(" *****   *****   *****   ***** ");
+        System.out.println("*     * *     * *     * *     *");
+        System.out.println("*     * *     * *     * *     *");
+        System.out.println("*     * *     * *****   ***** ");
+        System.out.println("*     * *     * *           * ");
+        System.out.println("*     * *     * *           * ");
+        System.out.println(" *****   *****  *      *****  ");
     }
 }
