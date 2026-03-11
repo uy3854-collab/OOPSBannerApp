@@ -1,9 +1,9 @@
 /**
- * UC3 - OOPS Banner using String.join()
- * Improves memory efficiency over string concatenation.
+ * UC4 - OOPS Banner using Array and Loop
+ * Improves modularity using arrays.
  * 
  * @author Umesh
- * @version 3.0
+ * @version 4.0
  */
 
 public class OOPSBannerApp {
@@ -31,12 +31,14 @@ public class OOPSBannerApp {
         String line7 = String.join(" ",
                 " ***** ", " ***** ", "*      ", " ***** ");
 
-        System.out.println(line1);
-        System.out.println(line2);
-        System.out.println(line3);
-        System.out.println(line4);
-        System.out.println(line5);
-        System.out.println(line6);
-        System.out.println(line7);
+        // Store lines in array
+        String banner[] = {
+                line1,line2,line3,line4,line5,line6,line7
+        };
+
+        // Print using loop
+        for(String line : banner){
+            System.out.println(line);
+        }
     }
 }
