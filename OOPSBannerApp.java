@@ -1,26 +1,14 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class OOPSBannerApp {
-
-    static class CharacterPattern
-    {
-        char character;
-        String pattern[];
-
-        CharacterPattern(char character, String pattern[])
-        {
-            this.character = character;
-            this.pattern = pattern;
-        }
-
-        public String[] getPattern()
-        {
-            return pattern;
-        }
-    }
 
     public static void main(String[] args)
     {
 
-        CharacterPattern O = new CharacterPattern('O', new String[]{
+        Map<Character, String[]> patternMap = new HashMap<>();
+
+        patternMap.put('O', new String[]{
                 " ***** ",
                 "*     *",
                 "*     *",
@@ -30,7 +18,7 @@ public class OOPSBannerApp {
                 " ***** "
         });
 
-        CharacterPattern P = new CharacterPattern('P', new String[]{
+        patternMap.put('P', new String[]{
                 "****** ",
                 "*     *",
                 "*     *",
@@ -40,7 +28,7 @@ public class OOPSBannerApp {
                 "*      "
         });
 
-        CharacterPattern S = new CharacterPattern('S', new String[]{
+        patternMap.put('S', new String[]{
                 " ***** ",
                 "*     *",
                 "*      ",
@@ -50,15 +38,21 @@ public class OOPSBannerApp {
                 " ***** "
         });
 
-        String oPattern[] = O.getPattern();
-        String pPattern[] = P.getPattern();
-        String sPattern[] = S.getPattern();
+        printBanner("OOPS", patternMap);
 
+    }
+
+    public static void printBanner(String word, Map<Character,String[]> map)
+    {
         for(int i = 0; i < 7; i++)
         {
-            System.out.println(oPattern[i] + "  " + oPattern[i] + "  " + pPattern[i] + "  " + sPattern[i]);
+            for(int j = 0; j < word.length(); j++)
+            {
+                char ch = word.charAt(j);
+                System.out.print(map.get(ch)[i] + "  ");
+            }
+            System.out.println();
         }
-
     }
 
 }
